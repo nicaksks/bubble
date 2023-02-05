@@ -12,7 +12,7 @@ def audios():
     print("Caso queira voltar para o início digite: 0\n")
 
     list_users()
-    selected = input("-> ")
+    selected = input("\n-> ")
     list_audios(selected)
 
 # Lista de Usuários
@@ -55,7 +55,7 @@ def list_audios(selected):
         print(a)
 
     try:
-        audioID = int(input("-> "))
+        audioID = int(input("\n -> "))
         play_audio(selected, audioID)
     except ValueError:
         print("Digite um número válido.")

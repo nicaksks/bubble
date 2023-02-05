@@ -11,7 +11,7 @@ def gifs():
     print("Caso queira voltar para o início digite: 0\n")
 
     list_users()
-    selected = input("-> ")
+    selected = input("\n-> ")
     list_gifs(selected)
 
 # Lista de Usuários
@@ -54,7 +54,7 @@ def list_gifs(selected):
         print(a)
 
     try:
-        gifID = int(input("-> "))
+        gifID = int(input("\n -> "))
         play_gif(selected, gifID)
     except ValueError:
         print("Digite um número válido.")

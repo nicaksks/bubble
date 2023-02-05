@@ -11,7 +11,7 @@ def images():
     print("Caso queira voltar para o início digite: 0\n")
 
     list_users()
-    selected = input("-> ")
+    selected = input("\n-> ")
     list_images(selected)
 
 # Lista de Usuários
@@ -55,7 +55,7 @@ def list_images(selected):
         print(a)
 
     try:
-        imageID = int(input("-> "))
+        imageID = int(input("\n -> "))
         play_images(selected, imageID)
     except ValueError:
         print("Digite um número válido.")

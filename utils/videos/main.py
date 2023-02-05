@@ -11,7 +11,7 @@ def videos():
     print("Caso queira voltar para o início digite: 0\n")
 
     list_users()
-    selected = input("-> ")
+    selected = input("\n-> ")
     list_videos(selected)
 
 # Lista de Usuários
@@ -55,7 +55,7 @@ def list_videos(selected):
         print(a)
 
     try:
-        videoID = int(input("-> "))
+        videoID = int(input("\n -> "))
         play_video(selected, videoID)
     except ValueError:
         print("Digite um número válido.")
