@@ -65,11 +65,11 @@ def list_images(selected):
 # Display Image
 def play_images(selected, imageID):
 
-    try:
+    if os.path.exists(f"assets/images/{selected.lower()}/{imageID}.png"):
         print(f"{selected.title()} está sendo exibido.")
         os.system(f"start assets/images/{selected.lower()}/{imageID}.png")
-        images()
-    except:
-        print("Essa imagem não existe.")
+        return images()
+    else:
+        print('Esse Imagem não existe.')
         sleep(1)
-    return images()
+        return images()

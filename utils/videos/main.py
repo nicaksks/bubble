@@ -65,11 +65,11 @@ def list_videos(selected):
 # Play Video
 def play_video(selected, videoID):
 
-    try:
+    if os.path.exists(f"assets/videos/{selected.lower()}/{videoID}.mp4"):
         print(f"O vídeo {selected.title()} está sendo exibido.")
         os.system(f"start assets/videos/{selected.lower()}/{videoID}.mp4")
-        videos()
-    except:
+        return videos()
+    else:
         print("Esse vídeo não existe.")
         sleep(1)
-    return videos()
+        return videos()

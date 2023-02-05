@@ -64,11 +64,12 @@ def list_gifs(selected):
 # Play Gif
 def play_gif(selected, gifID):
 
-    try:
+    if os.path.exists(f"assets/gifs/{selected.lower()}/{gifID}.gif"):
         print(f"Gif {selected.title()} está sendo exibido.")
         os.system(f"start assets/gifs/{selected.lower()}/{gifID}.gif")
-        gifs()
-    except:
+        return gifs()
+    else:
         print("Esse gif não existe.")
         sleep(1)
-    return gifs()
+        return gifs()
+

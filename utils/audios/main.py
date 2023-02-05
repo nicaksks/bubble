@@ -65,11 +65,11 @@ def list_audios(selected):
 # Play Audio
 def play_audio(selected, audioID):
 
-    try:
+    if os.path.exists(f"assets/audios/{selected.lower()}/{audioID}.wav"):
         print(f"Está tocando o áudio de {selected.title()}")
         playsound(f"assets/audios/{selected.lower()}/{audioID}.wav")
-        audios()
-    except:
+        return audios()
+    else:
         print("Esse áudio não existe.")
         sleep(1)
-    return audios()
+        return audios()
