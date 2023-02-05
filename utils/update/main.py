@@ -9,8 +9,8 @@ def update():
 
   os.system("cls")
   print("Os arquivos estão sendo baixados. Aguarde alguns minutos.")
-  url = "http://localhost:80/assets.rar"
-  name = "/assets.rar"
+  url = "http://localhost:80/assets.zip"
+  name = "/assets.zip"
   path = "assets/download"
 
   createFolder(path)
